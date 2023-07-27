@@ -17,7 +17,7 @@ const AboutSection = () => {
 
   return (
     <FadingRoute ckey={"about"}>
-      <article className="flex justify-center px-10 w-full md:lg:max-w-2xl sm:max-w-sm xs:max-w-xs">
+      <article className="flex justify-center px-10 w-full md:lg:max-w-xl sm:max-w-sm xs:max-w-xs mb-6">
         <div className="">
           <div className="flex justify-center">
             <h1 className="text-4xl text-center font-bold animate-bounce pt-4">
@@ -49,18 +49,19 @@ const AboutSection = () => {
           <div className="my-5"></div>
           <p className="text-lg text-justify">
             Hello! I'm Sebastián A. González, a Buenos Aires based web
-            developer. I live with my dog and i love to also do music. <br />
+            developer. I live with my dog and I also love to do music. <br />
             I'm quite open to everything but with a soft spot in my heart for
             front-end developing. So far I've worked more than anything with
             Angular and React. I'm currently navigating the mobile waters with
             Flutter which I'd also love to work with professionally! <br />
-            I'm very interested in positions who allow me to grow and learn from
+            I'm very interested in positions which allow me to grow and learn from
             each other. Hope that we can do it!
           </p>
-          <div className="flex justify-end ">
+          <div className="my-8"></div>
+          <div className="flex justify-end">
             <PiEyeClosedBold className="rotate-180" size={25} />
             <div className="mx-1"></div>
-            <PiEyeClosedBold  className="rotate-180" size={25} />
+            <PiEyeClosedBold className="rotate-180" size={25} />
             <div className="mx-2"></div>
             <FaRegHandPeace size={25} />
             <div className="mx-2"></div>

@@ -17,45 +17,49 @@ const WorkSection = () => {
 
   return (
     <FadingRoute ckey={"works"}>
-      <article>
-        <div className="text-center">
-          {" "}
+      <article className="mb-8">
+        <div className="">
           <h1 className="text-4xl text-center font-bold">Practice Projects</h1>
-          <div className="my-5"></div>
-          <h1 className="text-xl">
-            <div className="inline text">
-              <BiHappyBeaming className="inline" />
-              <PiWarningBold className="inline" />
-              <span>Under permanent construction</span>
-              <PiWarningBold className="inline" />
-              <BiHappyBeaming className="inline" />
+          <div className="my-10"></div>
+          <div id="content" className="px-6 sm:px-0">
+            <div className="block text-xl text-center">
+              <div className="block sm:inline">
+                <BiHappyBeaming className="inline" />
+                <PiWarningBold className="inline" />
+              </div>
+              <span className="text-base ">Under permanent construction</span>
+              <div className="block sm:inline">
+                <PiWarningBold className="inline" />
+                <BiHappyBeaming className="inline" />
+              </div>
             </div>
-          </h1>
-          <div className="my-14"></div>
-          <ul>
-            <li>
-              <h2 className="text-2xl">
-                <CgAsterisk
-                  size={30}
-                  className="inline animate-spin-slow mb-1"
-                ></CgAsterisk>{" "}
-                StaffTracker
-              </h2>
-              <a href="https://stafftracker.vercel.app">
-                stafftracker.vercel.app
-              </a>
-            </li>
-            <div className="my-10"></div>
-            <li>
-              <h2 className="text-2xl">
-                <HiArrowRight
-                  size={20}
-                  className="inline animate-bounce mr-2"
-                ></HiArrowRight>
-                Flutter challenge
-              </h2>
-            </li>
-          </ul>
+
+            <div className="my-14"></div>
+            <ul>
+              <li>
+                <h2 className="text-2xl">
+                  <CgAsterisk
+                    size={30}
+                    className="inline animate-spin-slow mb-1"
+                  ></CgAsterisk>{" "}
+                  StaffTracker
+                </h2>
+                <a href="https://stafftracker.vercel.app">
+                  stafftracker.vercel.app
+                </a>
+              </li>
+              <div className="my-10"></div>
+              <li>
+                <h2 className="text-2xl">
+                  <HiArrowRight
+                    size={20}
+                    className="inline animate-bounce mr-2"
+                  ></HiArrowRight>
+                  Flutter challenge
+                </h2>
+              </li>
+            </ul>
+          </div>
         </div>
       </article>
       <ActionBar locationpathname={locationpath} />
