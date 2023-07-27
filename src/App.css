@@ -1,0 +1,36 @@
+@keyframes logo-spin {
+    from {
+      filter: drop-shadow(0 0 1.5em #ffffff);
+      /* color: rgba(240, 255, 255, 0.438); */
+    }
+    to {
+      filter: drop-shadow(0 0 2em #abdbe8aa) rotate(360deg);
+      color: rgba(119, 146, 146, 0.701); 
+    }
+  }
+
+  .logo.react:hover {
+    animation: logo-spin 1.7s ease-in-out infinite alternate;
+  }
+
+/* .logo.react:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: drop-shadow(0 0 3em #61dafbaa);
+    animation: logo-spin 2s linear infinite;
+  } */
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+} */
+
+.logo-main {
+    stroke: gray
+}
