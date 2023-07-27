@@ -28,13 +28,13 @@ function App() {
   return (
     <>
       <div id="first-div" className={" " + "w-full min-h-screen"}>
-        <header className="p-10">
+        <header className="px-10 md:lg:py-10">
           <Logo
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
           />
         </header>
-        <div>
+        <div className="pb-10 md:lg:pb-0">
           <div className="flex flex-col items-center justify-center flex-1">
             <main>
               <AnimatePresence mode="wait">

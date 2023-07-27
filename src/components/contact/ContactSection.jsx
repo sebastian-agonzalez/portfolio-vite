@@ -42,7 +42,8 @@ const ContactSection = () => {
                   <h2 className="font-semibold text-xl">My LinkedIn</h2>
                   <div>
                     <a
-                      href="www.linkedin.com/in/sebastián-gonzález-628759184"
+                      id="window open"
+                      href="https://www.linkedin.com/in/sebasti%C3%A1n-gonz%C3%A1lez-628759184/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
