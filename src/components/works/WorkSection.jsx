@@ -36,27 +36,61 @@ const WorkSection = () => {
 
             <div className="my-14"></div>
             <ul>
-              <li>
-                <h2 className="text-2xl">
-                  <CgAsterisk
-                    size={30}
-                    className="inline animate-spin-slow mb-1"
-                  ></CgAsterisk>{" "}
-                  StaffTracker
-                </h2>
-                <a href="https://stafftracker.vercel.app">
-                  stafftracker.vercel.app
-                </a>
+              <li id="stafftracker">
+                <h2 className="text-2xl"></h2>
+                <div className="my-10"></div>
+                <div className="flex justify-start">
+                  <div className="inline-block">
+                    <span className="inline">
+                      <CgAsterisk
+                        size={30}
+                        className="inline animate-spin-slow mb-1"
+                      ></CgAsterisk>{" "}
+                    </span>
+                  </div>
+                  <div className="inline-block">
+                    <h2 className="font-semibold text-xl">StaffTracker</h2>
+                    <div>
+                      <a
+                        id="window open"
+                        href="https://stafftracker.vercel.app"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <span className="text-xs">go to </span>→
+                        stafftracker.vercel.app
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <div className="my-10"></div>
-              <li>
-                <h2 className="text-2xl">
-                  <HiArrowRight
-                    size={20}
-                    className="inline animate-bounce mr-2"
-                  ></HiArrowRight>
-                  Flutter challenge
-                </h2>
+              <li id="flutterchallenge">
+                <h2 className="text-2xl"></h2>
+                <div className="my-10"></div>
+                <div className="flex justify-start">
+                  <div className="inline-block">
+                    <span className="inline">
+                      <HiArrowRight
+                        size={20}
+                        className="inline animate-bounce mx-1"
+                      ></HiArrowRight>
+                    </span>
+                  </div>
+                  <div className="inline-block">
+                    <h2 className="font-semibold text-xl">Flutter Challenge</h2>
+                    <div>
+                      <a
+                        id="window open"
+                        href="https://stafftracker.vercel.app"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <span className="text-xs">go to </span>→
+                        stafftracker.vercel.app
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>

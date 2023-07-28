@@ -27,7 +27,7 @@ const ActionBar = ({ locationpathname }) => {
         id="button-section"
         className={`w-full flex ${
           matchesLocation(ROUTES.home) ? "flex-col lg:flex-row" : ""
-        } justify-center items-center lg:pt-10 text-gray-700`}
+        } justify-center items-center lg:pt-10`}
       >
         <article
           className={

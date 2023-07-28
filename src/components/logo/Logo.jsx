@@ -27,7 +27,7 @@ const Logo = ({ handleMouseEnter, handleMouseLeave }) => {
         <motion.svg
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className="focus:ring-0 focus:outline-none logo stroke-slate-800"
+          className="focus:ring-0 focus:outline-none logo logo-stroke-color"
           whileHover="hidden"
           whileTap="visible"
           width="602"

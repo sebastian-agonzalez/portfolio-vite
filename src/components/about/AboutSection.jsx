@@ -13,6 +13,7 @@ const AboutSection = () => {
 
   useEffect(() => {
     return () => setlocationpath(location);
+    //updates location for child on destroy so that conditional button rendering doesnt happen before animation
   }, [location]);
 
   return (
@@ -20,16 +21,14 @@ const AboutSection = () => {
       <article className="flex justify-center px-10 w-full md:lg:max-w-xl sm:max-w-sm xs:max-w-xs mb-6">
         <div className="">
           <div className="flex justify-center">
-            <h1 className="text-4xl text-center font-bold animate-bounce pt-4">
-              {" "}
-              About
-            </h1>
+            <h1 className="text-4xl text-center font-bold">About</h1>
             <div className="px-4"></div>
             <motion.div
               className="flex items-center"
               animate={{
-                scale: [1, 1.05, 1.05, 0.8, 1],
-                rotate: [0, 45, -40, 40, 0],
+                scale: [1, 1.05, 1.05, 1.05, 1],
+                rotate: [0, 30, -25, 30, 0],
+                transformOrigin: "bottom center"
                 //borderRadius: ["0%", "0%", "50%", "50%", "0%"],
               }}
               transition={{
@@ -54,8 +53,8 @@ const AboutSection = () => {
             front-end developing. So far I've worked more than anything with
             Angular and React. I'm currently navigating the mobile waters with
             Flutter which I'd also love to work with professionally! <br />
-            I'm very interested in positions which allow me to grow and learn from
-            each other. Hope that we can do it!
+            I'm very interested in positions which allow me to grow and learn
+            from each other. Hope that we can do it!
           </p>
           <div className="my-8"></div>
           <div className="flex justify-end">
