@@ -3,6 +3,19 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 
 const Logo = () => {
+  const controls1 = useAnimationControls();
+  const controls2 = useAnimationControls();
+  const controls3 = useAnimationControls();
+  const controls4 = useAnimationControls();
+  const controls5 = useAnimationControls();
+  const controls6 = useAnimationControls();
+  const controls7 = useAnimationControls();
+  const controls8 = useAnimationControls();
+  const controls9 = useAnimationControls();
+  const controls10 = useAnimationControls();
+  const controls11 = useAnimationControls();
+  const controls12 = useAnimationControls();
+
   useEffect(() => {
     sequence3();
   }, []);
@@ -46,19 +59,6 @@ const Logo = () => {
     },
   ];
 
-  const controls1 = useAnimationControls();
-  const controls2 = useAnimationControls();
-  const controls3 = useAnimationControls();
-  const controls4 = useAnimationControls();
-  const controls5 = useAnimationControls();
-  const controls6 = useAnimationControls();
-  const controls7 = useAnimationControls();
-  const controls8 = useAnimationControls();
-  const controls9 = useAnimationControls();
-  const controls10 = useAnimationControls();
-  const controls11 = useAnimationControls();
-  const controls12 = useAnimationControls();
-
   const controlsArray = [
     controls1,
     controls2,
@@ -74,12 +74,31 @@ const Logo = () => {
     controls12,
   ];
 
-  const sequence3 = async () => {
+  async function sequence3() {
+    console.log("loops");
+    const forwardConfig = {
+      opacity: 1,
+      pathLength: 1,
+      transition: {
+        duration: 1.25,
+        ease: "easeOut",
+      },
+    };
+    const backwardsConfig = {
+      opacity: 0,
+      pathLength: 0,
+      transition: {
+        duration: 0.8,
+      },
+    };
+
+    //pathlength simoultaneous FADE-IN
     await Promise.all(
       controlsArray.map((e) =>
         e.start({
           opacity: 1,
           pathLength: 1,
+          stroke: "#494970",
           transition: {
             duration: 4,
             ease: "easeOut",
@@ -87,7 +106,38 @@ const Logo = () => {
         })
       )
     );
-    await new Promise((resolve) => setTimeout(resolve, 4000));
+    //BREAK
+    await new Promise((resolve) => setTimeout(resolve, 2500));
+    //pathlength cascade BACKWARDS
+    for (let index = controlsArray.length - 1; index >= 0; index--) {
+      if (index === 8 || index === 5) continue;
+      if (index === 9 || index === 6) {
+        await Promise.all([
+          controlsArray[index].start(backwardsConfig),
+          controlsArray[index - 1].start(backwardsConfig),
+        ]);
+      } else {
+        await controlsArray[index].start(backwardsConfig);
+      }
+    }
+
+    //break
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    //pathlength cascade FORWARD
+    for (let index = 0; index < controlsArray.length; index++) {
+      if (index === 9) continue;
+      if (index === 8) {
+        await Promise.all([
+          controlsArray[index].start(forwardConfig),
+          controlsArray[index + 1].start(forwardConfig),
+        ]);
+      } else {
+        await controlsArray[index].start(forwardConfig);
+      }
+    }
+    //break
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    //pathlength simoultaneous FADE-OUT
     await Promise.all(
       controlsArray.map((e) =>
         e.start({
@@ -95,44 +145,22 @@ const Logo = () => {
           pathLength: 0,
           transition: {
             duration: 3,
-            ease: "easeOut",
+            ease: "easeIn",
           },
         })
       )
     );
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    for (let index = 0; index < controlsArray.length; index++) {
-      console.log(index);
-      await controlsArray[index].start({
-        opacity: 1,
-        pathLength: 1,
-        transition: {
-          duration: 1.25,
-          ease: "linear",
-        },
-      });
-    }
-    await new Promise((resolve) => setTimeout(resolve, 5000));
-    for (let index = controlsArray.length - 1; index >= 0; index--) {
-      console.log(index);
-      await controlsArray[index].start({
-        opacity: 0,
-        pathLength: 0,
-        transition: {
-          duration: 0.8,
-        },
-      });
-    }
+    await new Promise((resolve) => setTimeout(resolve, 2500));
 
-    console.log("seq");
+    //LOOP
     sequence3();
-  };
+  }
 
   return (
     <motion.div className="flex justify-center items-start py-2">
       <Link href="/">
         <svg
-          className="focus:ring-0 focus:outline-none logo logo-stroke-color"
+          className="focus:ring-0 focus:outline-none logo-hover-glow react logo-stroke-color"
           width="602"
           height="237"
           viewBox="0 0 602 237"
@@ -144,7 +172,12 @@ const Logo = () => {
               key={index}
               d={path.d}
               strokeWidth="12"
-              initial={{ opacity: 0, pathLength: 0 }}
+              initial={{
+                // opacity: 1,
+                // pathLength: 1,
+                opacity: 0,
+                pathLength: 0,
+              }}
               animate={controlsArray[index]}
               strokeLinecap="round"
             />

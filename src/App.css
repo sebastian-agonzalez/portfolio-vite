@@ -1,17 +1,24 @@
 @keyframes logo-spin {
-    from {
-      filter: drop-shadow(0 0 1.5em #ffffff);
-      /* color: rgba(240, 255, 255, 0.438); */
-    }
-    to {
-      filter: drop-shadow(0 0 2em #abdbe8aa) rotate(360deg);
-      color: rgba(119, 146, 146, 0.701); 
-    }
+  from {
+    filter: drop-shadow(0 0 1.5em #ffffff);
+    /* color: rgba(240, 255, 255, 0.438); */
   }
+  to {
+    filter: drop-shadow(0 0 2em #abdbe8aa) rotate(360deg);
+    color: rgba(119, 146, 146, 0.701);
+  }
+}
 
-  .logo.react:hover {
-    animation: logo-spin 1.7s ease-in-out infinite alternate;
-  }
+.logo.react:hover {
+  animation: logo-spin 1.7s ease-in-out infinite alternate;
+}
+
+.logo-hover-glow {
+    transition: filter 1s linear;
+}
+.logo-hover-glow:hover {
+    filter: drop-shadow(0 0 0.8em  #6b6b6b);
+}
 
 /* .logo.react:hover::before {
     content: "";
@@ -24,7 +31,6 @@
     animation: logo-spin 2s linear infinite;
   } */
 
-
 /* @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -32,5 +38,5 @@
 } */
 
 .logo-main {
-    stroke: gray
+  stroke: gray;
 }

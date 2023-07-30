@@ -14,7 +14,7 @@
   font-family: "Montserrat";
   line-height: 1.5;
   font-weight: 400;
-  color: rgb(73, 73, 112);
+  color: #494970;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,7 +22,10 @@
 }
 
 .logo-stroke-color {
-  stroke: rgb(42, 42, 63);
+  stroke: #2a2a3f;
+}
+.logo-stroke-color-initial {
+  stroke: aliceblue;
 }
 
 a,
