@@ -20,7 +20,7 @@ const WorkSection = () => {
 
   return (
     <FadingRoute ckey={"works"}>
-      <article className="mb-8 w-full flex justify-center px-10 mx-auto max-w-3xl">
+      <article className="mb-8 w-full flex justify-center pr-10 pl-6 mx-auto max-w-3xl">
         <div className="">
           <h1 className="text-4xl text-center font-extrabold">
             Practice Projects
@@ -60,6 +60,7 @@ const WorkSection = () => {
                     <div className="flex justify-between">
                       <h2 className="font-semibold text-xl">StaffTracker</h2>
                       <a
+                        className="flex"
                         id="window open"
                         href="https://stafftracker.vercel.app"
                         rel="noopener noreferrer"
@@ -114,6 +115,7 @@ const WorkSection = () => {
                         StaffTracker API
                       </h2>
                       <a
+                        className="flex"
                         id="window open"
                         href="https://abm-server.onrender.com/"
                         rel="noopener noreferrer"
@@ -159,6 +161,7 @@ const WorkSection = () => {
                         Flutter Challenge
                       </h2>
                       <a
+                        className="flex"
                         id="window open"
                         href="https://stafftracker.vercel.app"
                         rel="noopener noreferrer"

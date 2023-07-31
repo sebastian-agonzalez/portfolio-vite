@@ -19,19 +19,19 @@ const ActionBar = ({ locationpathname }) => {
     return locationpathname === route;
   }
 
-  const iconSize = locationpathname !== "/" ? 40 : 100;
+  const iconSize = locationpathname !== "/" ? 40 : 90;
 
   return (
     locationpathname && (
       <div
-        id="button-section"
+        id="action-bar"
         className={`w-full flex ${
-          matchesLocation(ROUTES.home) ? "flex-col lg:flex-row" : ""
-        } justify-center items-center lg:pt-10`}
+          matchesLocation(ROUTES.home) ? "my-0 sm:my-10 flex-col lg:flex-row gap-14 sm:gap-16" : "gap-14 sm:gap-20"
+        } justify-center items-center lg:pt-10 py-14`}
       >
         <article
           className={
-            matchesLocation(ROUTES.home) ? "hidden" : "" + " " + "p-10"
+            matchesLocation(ROUTES.home) ? "hidden" : "" + " " + ""
           }
         >
           <motion.button
@@ -51,7 +51,7 @@ const ActionBar = ({ locationpathname }) => {
         </article>
         <article
           className={
-            matchesLocation(ROUTES.work) ? "hidden" : "" + " " + "p-10"
+            matchesLocation(ROUTES.work) ? "hidden" : "" + " " + ""
           }
         >
           <motion.button
@@ -73,7 +73,7 @@ const ActionBar = ({ locationpathname }) => {
 
         <article
           className={
-            matchesLocation(ROUTES.about) ? "hidden" : "" + " " + "p-10"
+            matchesLocation(ROUTES.about) ? "hidden" : "" + " " + ""
           }
         >
           <motion.button
@@ -88,7 +88,7 @@ const ActionBar = ({ locationpathname }) => {
 
         <article
           className={
-            matchesLocation(ROUTES.contact) ? "hidden" : "" + " " + "p-10"
+            matchesLocation(ROUTES.contact) ? "hidden" : "" + " " + ""
           }
         >
           <motion.button

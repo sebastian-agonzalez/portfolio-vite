@@ -162,7 +162,7 @@ const Logo = () => {
         <svg
           className="focus:ring-0 focus:outline-none logo-hover-glow react logo-stroke-color"
           width="602"
-          height="237"
+          height="200"
           viewBox="0 0 602 237"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
