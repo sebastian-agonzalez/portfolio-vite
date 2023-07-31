@@ -17,7 +17,7 @@ const Logo = () => {
   const controls12 = useAnimationControls();
 
   useEffect(() => {
-    sequence3();
+    sequence();
   }, []);
 
   const pathData = [
@@ -74,13 +74,13 @@ const Logo = () => {
     controls12,
   ];
 
-  async function sequence3() {
-    console.log("loops");
+  async function sequence() {
+    //console.log("loops");
     const forwardConfig = {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 1.25,
+        duration: 1,
         ease: "easeOut",
       },
     };
@@ -153,7 +153,7 @@ const Logo = () => {
     await new Promise((resolve) => setTimeout(resolve, 2500));
 
     //LOOP
-    sequence3();
+    sequence();
   }
 
   return (

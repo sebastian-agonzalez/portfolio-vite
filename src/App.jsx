@@ -1,14 +1,19 @@
 import "./App.css";
+
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { Route, Switch, useLocation } from "wouter";
+
 import Footer from "./components/footer/Footer";
 import Logo from "./components/logo/Logo";
 import MenuSection from "./components/menu/MenuSection";
 import WorkSection from "./components/works/WorkSection";
 import AboutSection from "./components/about/AboutSection";
 import ContactSection from "./components/contact/ContactSection";
-import { AnimatePresence } from "framer-motion";
-import { Route, Switch, useLocation } from "wouter";
 import OverlayScreen from "./components/overlay-screen/OverlayScreen";
+
+
+
 
 function App() {
   const [isHovered, setIsHovered] = useState(false);
@@ -30,9 +35,9 @@ function App() {
           handleMouseLeave={handleMouseLeave}
         />
       </header>
-      <div className="flex-1">
-        <div className="flex flex-col items-center justify-center">
-          <main className="flex-1">
+      <div className="flex-1 w-full">
+        <div className="w-full">
+          <main className="w-full">
             <AnimatePresence mode="wait">
               <Switch location={location} key={location + "key"}>
                 <Route path="/work" component={WorkSection} />

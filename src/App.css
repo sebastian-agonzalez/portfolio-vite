@@ -1,6 +1,6 @@
 @keyframes logo-spin {
   from {
-    filter: drop-shadow(0 0 1.5em #ffffff);
+    filter: drop-shadow(0 0 1em #ffffff);
     /* color: rgba(240, 255, 255, 0.438); */
   }
   to {
@@ -14,7 +14,7 @@
 }
 
 .logo-hover-glow {
-    transition: filter 1s linear;
+    transition: filter 0.7s linear;
 }
 .logo-hover-glow:hover {
     filter: drop-shadow(0 0 0.8em  #6b6b6b);

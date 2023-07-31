@@ -105,4 +105,4 @@ const ActionBar = ({ locationpathname }) => {
   );
 };
 
-export default React.memo(ActionBar);
+export default ActionBar;
