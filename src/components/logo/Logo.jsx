@@ -80,7 +80,7 @@ const Logo = () => {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeOut",
       },
     };
@@ -137,6 +137,27 @@ const Logo = () => {
     }
     //break
     await new Promise((resolve) => setTimeout(resolve, 3000));
+    //
+    await Promise.all(
+      controlsArray.map((e) =>
+        e.start({
+          boxShadow: "0 0 0 #ffffff",
+        })
+      )
+    );
+    await Promise.all(
+      controlsArray.map((e) =>
+        e.start({
+          boxShadow: "0 0 20px #ffffff",
+          transition: {
+            duration: 1,
+            ease: "easeIn",
+            yoyo: Infinity
+          },
+        })
+      )
+    );
+
     //pathlength simoultaneous FADE-OUT
     await Promise.all(
       controlsArray.map((e) =>
