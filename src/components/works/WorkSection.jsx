@@ -73,10 +73,11 @@ const WorkSection = () => {
                       </a>
                     </div>
                     <div className="my-4"></div>
-                    <div id="stafftracker-description">
-                      <p className="">
+                    <div id="stafftracker-description" className="pr-4">
+                      <p className="text-justify [word-spacing:0px] tracking-tighter">
                         An app that mimicks a system to keep track of the staff
-                        in a company <br />
+                        in a company.
+                        <br />
                         Built on <span className="text-slate-500">Next.js</span>
                         , uses <span className="text-slate-500">zustand</span>{" "}
                         for state management,{" "}
@@ -85,10 +86,10 @@ const WorkSection = () => {
                         <span className="text-slate-500">tailwind</span>,
                         flowbite and MUI for styling.
                         <br />
-                        Using{" "}
-                        <span className="text-slate-500">apollo-client</span> ,
-                        consumes its own{" "}
-                        <span className="text-slate-500">graphql</span> api.{" "}
+                        It consumes its own{" "}
+                        <span className="text-slate-500">graphql</span> api
+                        using{" "}
+                        <span className="text-slate-500">apollo-client</span>.
                         <br />
                         You can see your staff, go the a view page for each,
                         modify the profiles and add a new register.
@@ -128,9 +129,9 @@ const WorkSection = () => {
                       </a>
                     </div>
                     <div className="my-4"></div>
-                    <div id="stafftracker-description">
-                      <p className="">
-                        The API for StaffTracker to consume. <br />
+                    <div id="stafftracker-description" className="pr-4">
+                      <p className="text-justify [word-spacing:4px] tracking-tighter">
+                        The API for StaffTracker web app to consume. <br />
                         Implements{" "}
                         <span className="text-slate-500">
                           Apollo Server Library
@@ -174,11 +175,11 @@ const WorkSection = () => {
                       </a>
                     </div>
                     <div className="my-4"></div>
-                    <div>
-                      <p className="">
-                        A little Flutter trainee position challenge which
-                        consists of displaying a home screen which you can tap
-                        and it will display a random color each time. <br />
+                    <div className="pr-4">
+                      <p className="text-justify [word-spacing:2px] tracking-tight">
+                        A Flutter trainee challenge which consists of displaying
+                        a home screen which you can tap and it will display a
+                        random color each time. <br />
                         You can also "favorite" any of these colors and store
                         them in your favorite section. You can also "unfav" any
                         to discard them.

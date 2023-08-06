@@ -26,8 +26,8 @@ const ActionBar = ({ locationpathname }) => {
       <div
         id="action-bar"
         className={`w-full flex ${
-          matchesLocation(ROUTES.home) ? "my-0 sm:my-10 flex-col lg:flex-row gap-14 sm:gap-16" : "gap-14 sm:gap-20"
-        } justify-center items-center lg:pt-10 py-14`}
+          matchesLocation(ROUTES.home) ? "my-0 sm:my-10 py-5 sm:py-14 flex-col lg:flex-row gap-14 sm:gap-16" : "gap-14 sm:gap-20 py-14"
+        } justify-center items-center lg:pt-10 `}
       >
         <article
           className={

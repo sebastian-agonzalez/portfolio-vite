@@ -39,7 +39,7 @@ const ContactSection = () => {
                 <h2 className="text-2xl"></h2>
                 <div className="my-10"></div>
                 <div className="flex justify-start">
-                  <div className="flex flex-col justify-center">
+                  <div className="flex flex-col">
                     <span className="inline">
                       <PiLinkedinLogo
                         size={25}
@@ -68,7 +68,7 @@ const ContactSection = () => {
                 <h2 className="text-2xl"></h2>
                 <div className="my-10"></div>
                 <div className="flex justify-start">
-                  <div className="flex flex-col justify-center">
+                  <div className="flex flex-col">
                     <span className="inline">
                       <MdAlternateEmail
                         size={25}
@@ -81,21 +81,28 @@ const ContactSection = () => {
                     <h2 className="font-semibold text-xl">My E-Mail</h2>
                     <div>
                       <button
-                        className="bg-transparent focus:outline-none"
+                        className="bg-transparent focus:outline-none text-left"
                         onClick={() => {
                           navigator.clipboard.writeText("onemogen8@gmail.com");
                           setCopiedVisible(true);
                         }}
                       >
-                        <span className="text-xs">click to copy </span>→
+                        <span className="text-xs">click to copy </span>
+                        <span className=" inline-block rotate-90 sm:rotate-0">
+                          →
+                        </span>{" "}
                         onemogen8@gmail.com
                       </button>
-                    </div>
-                    {copiedVisible && (
-                      <div className="text-center">
-                        <span>copied!</span>
+
+                      <div
+                        className={
+                          "flex justify-center " +
+                          (copiedVisible ? "visible" : "invisible")
+                        }
+                      >
+                        <span className="text-xs py-1">copied to clipboard!</span>
                       </div>
-                    )}
+                    </div>
                   </div>
                 </div>
               </li>

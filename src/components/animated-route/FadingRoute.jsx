@@ -12,7 +12,7 @@ const FadingRoute = ({ ckey, directionX, directionY, children }) => {
       exit={{
         opacity: 0,
         transition: {
-          duration: directionY || directionX ? 0.9 : 0.8,
+          duration: directionY || directionX ? 0.6 : 0.8,
           ease: "easeIn",
         },
         ...(directionY ? { y: directionY } : {}),

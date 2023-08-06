@@ -49,7 +49,7 @@ const AboutSection = () => {
             <div className="my-10"></div>
             <h2 className="text-2xl text-center"></h2>
             <div className="my-5"></div>
-            <p className="text-lg text-justify font-semibold">
+            <p className="text-lg font-semibold text-left sm:text-justify sm:tracking-tight">
               Hello! I'm Sebastián A. González, a Buenos Aires based web
               developer. I live with my dog and I also love to make music. <br />
               I'm quite open to everything but with a soft spot in my heart for
