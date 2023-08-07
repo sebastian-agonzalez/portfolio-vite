@@ -37,7 +37,7 @@ const ContactSection = () => {
           <div className="lg:px-4">
             <h1 className="text-4xl text-center font-extrabold">
               Contact Me
-              <TbMoodCrazyHappy className="inline animate-spin-slow mb-1 mx-2"></TbMoodCrazyHappy>
+              {/* <TbMoodCrazyHappy className="inline animate-spin-slow mb-1 mx-2"></TbMoodCrazyHappy> */}
             </h1>
             <div className="my-16"></div>
             <ul>
