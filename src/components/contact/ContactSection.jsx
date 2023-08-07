@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 
 import ActionBar from "../action-bar/ActionBar";
 import FadingRoute from "../animated-route/FadingRoute";
+import DividerIcon from "../divider-with-icon/DividerIcon";
 
 import { PiLinkedinLogo } from "react-icons/pi";
 import { TbMoodCrazyHappy } from "react-icons/tb";
 import { MdAlternateEmail } from "react-icons/md";
+import { TbMessages } from "react-icons/tb";
 
 const ContactSection = () => {
   const [copiedVisible, setCopiedVisible] = useState(false);
@@ -28,6 +30,10 @@ const ContactSection = () => {
     <FadingRoute ckey={"contact"}>
       <article className="w-full flex justify-center px-10 mx-auto max-w-3xl mb-8">
         <div className="w-full">
+          <DividerIcon>
+            <TbMessages size={30}></TbMessages>
+          </DividerIcon>
+          <div className="py-5"></div>
           <div className="lg:px-4">
             <h1 className="text-4xl text-center font-extrabold">
               Contact Me
@@ -100,7 +106,9 @@ const ContactSection = () => {
                           (copiedVisible ? "visible" : "invisible")
                         }
                       >
-                        <span className="text-xs py-1">copied to clipboard!</span>
+                        <span className="text-xs py-1">
+                          copied to clipboard!
+                        </span>
                       </div>
                     </div>
                   </div>
