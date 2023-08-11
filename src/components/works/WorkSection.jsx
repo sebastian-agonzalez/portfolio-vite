@@ -1,5 +1,6 @@
 import ActionBar from "../action-bar/ActionBar";
 import FadingRoute from "../animated-route/FadingRoute";
+import { motion } from "framer-motion";
 
 import { PiWarningBold } from "react-icons/pi";
 import { CgAsterisk } from "react-icons/cg";
@@ -23,37 +24,42 @@ const WorkSection = () => {
   return (
     <FadingRoute ckey={"works"}>
       <article className="mb-8 w-full flex justify-center pr-10 pl-6 mx-auto max-w-3xl">
-        <div>
+        <div className="w-full">
           <DividerIcon>
             <IoCodeSlash size={30}></IoCodeSlash>
           </DividerIcon>
           <div className="py-5"></div>
-          <div className="">
+          <div className="w-full">
             <h1 className="text-4xl text-center font-extrabold">
               Practice Projects
             </h1>
             <div className="my-10"></div>
-            <div id="content" className="lg:px-5 font-semibold">
-              <div
-                style={{ color: "#ffff002e" }}
-                className="block text-xl text-center"
-              >
-                <div className="block sm:inline">
-                  <BiHappyBeaming className="inline" />
-                  <PiWarningBold className="inline" />
-                </div>
-                <span className="text-base ">Under permanent construction</span>
-                <div className="block sm:inline">
-                  <PiWarningBold className="inline" />
-                  <BiHappyBeaming className="inline" />
-                </div>
-              </div>
 
+            <div id="scrolling-text" className="w-full mx-2 overflow-hidden">
+              {" "}
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: "-100%" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 8,
+                  ease: "linear",
+                }}
+                style={{ color: "#ffff003e" }}
+                className="text-md"
+              >
+                <BiHappyBeaming className="inline" />
+                <PiWarningBold className="inline" />
+                <span className="text-base">Site under construction</span>
+                <PiWarningBold className="inline" />
+                <BiHappyBeaming className="inline" />
+              </motion.div>
+            </div>
+
+            <div id="content" className="lg:px-5 font-semibold">
               <div className="my-14"></div>
               <ul>
                 <li id="stafftracker">
-                  <h2 className="text-2xl"></h2>
-                  <div className="my-10"></div>
                   <div className="flex justify-start">
                     <div className="inline-block">
                       <span className="inline">

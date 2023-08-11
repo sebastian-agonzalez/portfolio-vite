@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const DividerIcon = ({ children }) => {
   return (
-    <div class="flex items-center justify-center my-2 max-w-[150px] mx-auto ">
+    <div className="flex items-center justify-center my-2 max-w-[150px] mx-auto ">
       <div className="w-1/2">
         {" "}
         <motion.div
@@ -13,7 +13,7 @@ const DividerIcon = ({ children }) => {
         ></motion.div>
       </div>
 
-      <div class="mx-2 text-gray-600">{children}</div>
+      <div className="mx-2 text-gray-600">{children}</div>
       <div className="w-1/2">
         {" "}
         <motion.div
