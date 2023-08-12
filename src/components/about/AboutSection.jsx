@@ -11,14 +11,20 @@ import { PiPeaceBold, PiEyeClosedBold } from "react-icons/pi";
 import { FaRegHandPeace } from "react-icons/fa6";
 import { PiSealQuestion } from "react-icons/pi";
 
-
+/**
+ * route section to describe profile
+ */
 const AboutSection = () => {
   const [location] = useLocation();
   const [locationpath, setlocationpath] = useState(location);
 
   useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
+  //updates location for child on destroy so that conditional button rendering doesnt happen before animation
+  useEffect(() => {
     return () => setlocationpath(location);
-    //updates location for child on destroy so that conditional button rendering doesnt happen before animation
   }, [location]);
 
   return (

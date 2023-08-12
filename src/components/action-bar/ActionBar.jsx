@@ -14,25 +14,28 @@ const ROUTES = Object.freeze({
   contact: "/contact",
 });
 
+/**
+ * Component which contains the app buttonsthat change to sections
+ */
 const ActionBar = ({ locationpathname }) => {
   function matchesLocation(route) {
     return locationpathname === route;
   }
 
-  const iconSize = locationpathname !== "/" ? 40 : 90;
+  const iconSize = locationpathname !== "/" ? 40 : 90; //setting defaults for icon size on location
 
   return (
     locationpathname && (
       <div
         id="action-bar"
         className={`w-full flex ${
-          matchesLocation(ROUTES.home) ? "my-0 sm:my-10 py-5 sm:py-14 flex-col lg:flex-row gap-14 sm:gap-16" : "gap-14 sm:gap-20 py-14"
+          matchesLocation(ROUTES.home)
+            ? "my-0 sm:my-10 py-5 sm:py-14 flex-col lg:flex-row gap-14 sm:gap-16"
+            : "gap-14 sm:gap-20 py-14"
         } justify-center items-center lg:pt-10 `}
       >
         <article
-          className={
-            matchesLocation(ROUTES.home) ? "hidden" : "" + " " + ""
-          }
+          className={matchesLocation(ROUTES.home) ? "hidden" : "" + " " + ""}
         >
           <motion.button
             whileHover={{ scale: 1.3, transition: { duration: 0.3 } }}
@@ -50,9 +53,7 @@ const ActionBar = ({ locationpathname }) => {
           </motion.button>
         </article>
         <article
-          className={
-            matchesLocation(ROUTES.work) ? "hidden" : "" + " " + ""
-          }
+          className={matchesLocation(ROUTES.work) ? "hidden" : "" + " " + ""}
         >
           <motion.button
             whileHover={{ scale: 1.3, transition: { duration: 0.3 } }}
@@ -72,9 +73,7 @@ const ActionBar = ({ locationpathname }) => {
         </article>
 
         <article
-          className={
-            matchesLocation(ROUTES.about) ? "hidden" : "" + " " + ""
-          }
+          className={matchesLocation(ROUTES.about) ? "hidden" : "" + " " + ""}
         >
           <motion.button
             whileHover={{ scale: 1.3, transition: { duration: 0.3 } }}
@@ -87,9 +86,7 @@ const ActionBar = ({ locationpathname }) => {
         </article>
 
         <article
-          className={
-            matchesLocation(ROUTES.contact) ? "hidden" : "" + " " + ""
-          }
+          className={matchesLocation(ROUTES.contact) ? "hidden" : "" + " " + ""}
         >
           <motion.button
             whileHover={{ scale: 1.3, transition: { duration: 0.3 } }}

@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 
+/**
+ * Component that wraps a section for animate on enter and exit in a fading way
+ */
 const FadingRoute = ({ ckey, directionX, directionY, children }) => {
   return (
     <motion.div

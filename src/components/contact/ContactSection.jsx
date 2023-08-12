@@ -6,19 +6,27 @@ import FadingRoute from "../animated-route/FadingRoute";
 import DividerIcon from "../divider-with-icon/DividerIcon";
 
 import { PiLinkedinLogo } from "react-icons/pi";
-import { TbMoodCrazyHappy } from "react-icons/tb";
 import { MdAlternateEmail } from "react-icons/md";
 import { TbMessages } from "react-icons/tb";
 
+/**
+ * section route for contact info
+ */
 const ContactSection = () => {
   const [copiedVisible, setCopiedVisible] = useState(false);
   const [location] = useLocation();
   const [locationpath, setlocationpath] = useState(location);
 
   useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
+  //effect to update child location on component destruction so it "waits" exit animation
+  useEffect(() => {
     return () => setlocationpath(location);
   }, [location]);
 
+  //effect for showing link copied to clipboard text
   useEffect(() => {
     if (copiedVisible)
       setTimeout(() => {
@@ -35,10 +43,7 @@ const ContactSection = () => {
           </DividerIcon>
           <div className="py-5"></div>
           <div className="lg:px-4">
-            <h1 className="text-4xl text-center font-extrabold">
-              Contact Me
-              {/* <TbMoodCrazyHappy className="inline animate-spin-slow mb-1 mx-2"></TbMoodCrazyHappy> */}
-            </h1>
+            <h1 className="text-4xl text-center font-extrabold">Contact Me</h1>
             <div className="my-16"></div>
             <ul>
               <li id="linkedin">

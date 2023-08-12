@@ -1,22 +1,30 @@
+import { motion } from "framer-motion";
+import { useLocation } from "wouter";
+import { useEffect, useState } from "react";
+
 import ActionBar from "../action-bar/ActionBar";
 import FadingRoute from "../animated-route/FadingRoute";
-import { motion } from "framer-motion";
+import DividerIcon from "../divider-with-icon/DividerIcon";
 
 import { PiWarningBold } from "react-icons/pi";
 import { CgAsterisk } from "react-icons/cg";
 import { BiHappyBeaming } from "react-icons/bi";
 import { HiArrowRight } from "react-icons/hi";
 import { TbExternalLink } from "react-icons/tb";
-
-import { useLocation } from "wouter";
-import { useEffect, useState } from "react";
-import DividerIcon from "../divider-with-icon/DividerIcon";
 import { IoCodeSlash } from "react-icons/io5";
 
+/**
+ * Section to display information about projects
+ */
 const WorkSection = () => {
   const [location] = useLocation();
   const [locationpath, setlocationpath] = useState(location);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
+  //updates location for child on destroy so that conditional button rendering doesnt happen before animation
   useEffect(() => {
     return () => setlocationpath(location);
   }, [location]);
@@ -30,9 +38,7 @@ const WorkSection = () => {
           </DividerIcon>
           <div className="py-5"></div>
           <div className="w-full">
-            <h1 className="text-4xl text-center font-extrabold">
-              Practice Projects
-            </h1>
+            <h1 className="text-4xl text-center font-extrabold">Projects</h1>
             <div className="my-10"></div>
 
             <div id="scrolling-text" className="w-full mx-2 overflow-hidden">

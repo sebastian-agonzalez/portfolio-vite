@@ -2,6 +2,9 @@ import { motion, useAnimationControls } from "framer-motion";
 import { useEffect } from "react";
 import { Link } from "wouter";
 
+/**
+ * Component that displays main animated logo
+ */
 const Logo = () => {
   const controls1 = useAnimationControls();
   const controls2 = useAnimationControls();
@@ -16,6 +19,7 @@ const Logo = () => {
   const controls11 = useAnimationControls();
   const controls12 = useAnimationControls();
 
+  //effect for firing custom animation
   useEffect(() => {
     sequence();
   }, []);
@@ -74,6 +78,7 @@ const Logo = () => {
     controls12,
   ];
 
+  //complex animation cycle
   async function sequence() {
     //console.log("loops");
     const forwardConfig = {
@@ -120,7 +125,6 @@ const Logo = () => {
         await controlsArray[index].start(backwardsConfig);
       }
     }
-
     //break
     await new Promise((resolve) => setTimeout(resolve, 1000));
     //pathlength cascade FORWARD
@@ -137,7 +141,7 @@ const Logo = () => {
     }
     //break
     await new Promise((resolve) => setTimeout(resolve, 3000));
-    //
+    //test
     await Promise.all(
       controlsArray.map((e) =>
         e.start({
@@ -152,12 +156,11 @@ const Logo = () => {
           transition: {
             duration: 1,
             ease: "easeIn",
-            yoyo: Infinity
+            yoyo: Infinity,
           },
         })
       )
     );
-
     //pathlength simoultaneous FADE-OUT
     await Promise.all(
       controlsArray.map((e) =>
@@ -171,8 +174,8 @@ const Logo = () => {
         })
       )
     );
+    //break
     await new Promise((resolve) => setTimeout(resolve, 2500));
-
     //LOOP
     sequence();
   }
@@ -194,8 +197,6 @@ const Logo = () => {
               d={path.d}
               strokeWidth="12"
               initial={{
-                // opacity: 1,
-                // pathLength: 1,
                 opacity: 0,
                 pathLength: 0,
               }}

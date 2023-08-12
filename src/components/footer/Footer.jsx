@@ -1,3 +1,6 @@
+/**
+ * Simple footer component
+ */
 const Footer = () => {
   return (
     <footer className="w-full px-3 py-2 bg-transparent">
