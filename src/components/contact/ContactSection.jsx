@@ -51,10 +51,10 @@ const ContactSection = () => {
                 <div className="my-10"></div>
                 <div className="flex justify-start">
                   <div className="flex flex-col">
-                    <span className="inline">
+                    <span >
                       <PiLinkedinLogo
                         size={25}
-                        className="inline animate-pulse mx-1"
+                        className="animate-pulse mx-1"
                       ></PiLinkedinLogo>
                     </span>
                   </div>
@@ -80,10 +80,10 @@ const ContactSection = () => {
                 <div className="my-10"></div>
                 <div className="flex justify-start">
                   <div className="flex flex-col">
-                    <span className="inline">
+                    <span >
                       <MdAlternateEmail
                         size={25}
-                        className="inline animate-pulse mx-1"
+                        className="animate-pulse mx-1"
                       ></MdAlternateEmail>
                     </span>
                   </div>

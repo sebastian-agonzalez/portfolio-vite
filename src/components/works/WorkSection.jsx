@@ -47,9 +47,11 @@ const WorkSection = () => {
           style={{ color: "#ffff003e" }}
           className="text-md"
         >
-          <BiHappyBeaming /> <PiWarningBold />{" "}
+          <BiHappyBeaming  />{" "}
+          <PiWarningBold  />{" "}
           <span className="text-base">Site under construction</span>{" "}
-          <PiWarningBold /> <BiHappyBeaming />
+          <PiWarningBold  />{" "}
+          <BiHappyBeaming  />
         </motion.div>
       </div>
     </>
@@ -76,7 +78,7 @@ const WorkSection = () => {
                       <span>
                         <CgAsterisk
                           size={30}
-                          className="inline animate-spin-slow mb-1"
+                          className="animate-spin-slow mb-1"
                         ></CgAsterisk>
                       </span>
                     </div>
@@ -94,7 +96,7 @@ const WorkSection = () => {
                             <span className="text-xs">go to </span>→
                             stafftracker
                           </span>
-                          <TbExternalLink size={25} className="inline mx-2" />
+                          <TbExternalLink size={25} className="mx-2" />
                         </a>
                       </div>
                       <div className="my-4"></div>
@@ -127,7 +129,7 @@ const WorkSection = () => {
                       <span>
                         <CgAsterisk
                           size={30}
-                          className="inline animate-spin-slow mb-1"
+                          className="animate-spin-slow mb-1"
                         ></CgAsterisk>
                       </span>
                     </div>
@@ -146,7 +148,7 @@ const WorkSection = () => {
                           <span className="invisible sm:visible">
                             <span className="text-xs">go to </span>→ ST API
                           </span>
-                          <TbExternalLink size={25} className="inline mx-2" />
+                          <TbExternalLink size={25} className="mx-2" />
                         </a>
                       </div>
                       <div className="my-4"></div>
@@ -169,7 +171,7 @@ const WorkSection = () => {
                       <span>
                         <HiArrowRight
                           size={20}
-                          className="inline animate-bounce mx-1"
+                          className="animate-bounce mx-1"
                         ></HiArrowRight>
                       </span>
                     </div>
@@ -188,7 +190,7 @@ const WorkSection = () => {
                           <span className="invisible sm:visible">
                             <span className="text-xs">go to </span>→ flutter
                           </span>
-                          <TbExternalLink size={25} className="inline mx-2" />
+                          <TbExternalLink size={25} className="mx-2" />
                         </a>
                       </div>
                       <div className="my-4"></div>
@@ -213,7 +215,7 @@ const WorkSection = () => {
                       <span>
                         <HiArrowRight
                           size={20}
-                          className="inline animate-bounce mx-1"
+                          className="animate-bounce mx-1"
                         ></HiArrowRight>
                       </span>
                     </div>
@@ -227,7 +229,7 @@ const WorkSection = () => {
                           rel="noopener noreferrer"
                           target="_blank"
                         >
-                          <TbExternalLink size={25} className="inline mx-2" />
+                          <TbExternalLink size={25} className="mx-2" />
                         </a>
                       </div>
                       <div className="my-4"></div>

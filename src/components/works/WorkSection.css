@@ -2,6 +2,3 @@ p > span {
   @apply text-slate-500;
 }
 
-svg {
-  display: inline;
-}

@@ -53,3 +53,7 @@ h1 {
 body {
   background: url("./assets/img-noise-200x200-v4.png") repeat;
 }
+
+svg {
+  display: inline !important;
+}
