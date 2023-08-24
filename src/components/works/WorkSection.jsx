@@ -10,8 +10,7 @@ import DividerIcon from "../divider-with-icon/DividerIcon";
 
 import { PiWarningBold } from "react-icons/pi";
 import { CgAsterisk } from "react-icons/cg";
-import { BiHappyBeaming } from "react-icons/bi";
-import { HiArrowRight } from "react-icons/hi";
+import { BiHappyBeaming, BiLogoGithub } from "react-icons/bi";
 import { TbExternalLink } from "react-icons/tb";
 import { IoCodeSlash } from "react-icons/io5";
 
@@ -47,11 +46,9 @@ const WorkSection = () => {
           style={{ color: "#ffff003e" }}
           className="text-md"
         >
-          <BiHappyBeaming  />{" "}
-          <PiWarningBold  />{" "}
+          <BiHappyBeaming /> <PiWarningBold />{" "}
           <span className="text-base">Site under construction</span>{" "}
-          <PiWarningBold  />{" "}
-          <BiHappyBeaming  />
+          <PiWarningBold /> <BiHappyBeaming />
         </motion.div>
       </div>
     </>
@@ -69,13 +66,14 @@ const WorkSection = () => {
             <h1 className="text-4xl text-center font-extrabold">Projects</h1>
 
             {animatedScrollingDisclaimer}
+
             <div id="content" className="lg:px-5 font-semibold">
               <div className="my-14"></div>
               <ul>
                 <li id="stafftracker">
                   <div className="flex justify-start">
                     <div className="inline-block">
-                      <span>
+                      <span className="animate-pulse">
                         <CgAsterisk
                           size={30}
                           className="animate-spin-slow mb-1"
@@ -84,20 +82,27 @@ const WorkSection = () => {
                     </div>
                     <div className="inline-block">
                       <div className="flex justify-between">
-                        <h2 className="font-semibold text-xl">StaffTracker</h2>
-                        <a
-                          className="flex"
-                          id="window open"
-                          href="https://stafftracker.vercel.app"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          <span className="invisible sm:visible">
-                            <span className="text-xs">go to </span>→
-                            stafftracker
-                          </span>
-                          <TbExternalLink size={25} className="mx-2" />
-                        </a>
+                        <h2 className="font-semibold text-2xl">StaffTracker</h2>
+                        <span>
+                          <a
+                            className="inline"
+                            id="window open"
+                            href="https://github.com/sebastian-agonzalez/employee-abm"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <BiLogoGithub size={25} className="mx-2" />
+                          </a>
+                          <a
+                            className="inline"
+                            id="window open"
+                            href="https://stafftracker.vercel.app"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <TbExternalLink size={25} className="mx-2" />
+                          </a>
+                        </span>
                       </div>
                       <div className="my-4"></div>
                       <div id="stafftracker-description" className="pr-4">
@@ -122,11 +127,10 @@ const WorkSection = () => {
                   </div>
                 </li>
                 <li id="stafftracker-API">
-                  <h2 className="text-2xl"></h2>
                   <div className="my-10"></div>
                   <div className="flex justify-start">
                     <div className="inline-block">
-                      <span>
+                      <span className="animate-pulse">
                         <CgAsterisk
                           size={30}
                           className="animate-spin-slow mb-1"
@@ -135,21 +139,29 @@ const WorkSection = () => {
                     </div>
                     <div className="inline-block">
                       <div className="flex justify-between">
-                        <h2 className="font-semibold text-xl">
+                        <h2 className="font-semibold text-2xl">
                           StaffTracker API
                         </h2>
-                        <a
-                          className="flex"
-                          id="window open"
-                          href="https://abm-server.onrender.com/"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          <span className="invisible sm:visible">
-                            <span className="text-xs">go to </span>→ ST API
-                          </span>
-                          <TbExternalLink size={25} className="mx-2" />
-                        </a>
+                        <span>
+                          <a
+                            className="inline"
+                            id="window open"
+                            href="https://github.com/sebastian-agonzalez/abm-server"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <BiLogoGithub size={25} className="mx-2" />
+                          </a>
+                          <a
+                            className="inline"
+                            id="window open"
+                            href="https://abm-server.onrender.com/"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            <TbExternalLink size={25} className="mx-2" />
+                          </a>
+                        </span>
                       </div>
                       <div className="my-4"></div>
                       <div id="stafftracker-description" className="pr-4">
@@ -164,20 +176,19 @@ const WorkSection = () => {
                   </div>
                 </li>
                 <li id="flutterchallenge">
-                  <h2 className="text-2xl"></h2>
                   <div className="my-10"></div>
                   <div className="flex justify-start">
                     <div className="inline-block">
-                      <span>
-                        <HiArrowRight
-                          size={20}
-                          className="animate-bounce mx-1"
-                        ></HiArrowRight>
+                      <span className="animate-pulse">
+                        <CgAsterisk
+                          size={30}
+                          className="animate-spin-slow mb-1"
+                        ></CgAsterisk>
                       </span>
                     </div>
                     <div className="inline-block">
                       <div className="flex justify-between">
-                        <h2 className="font-semibold text-xl">
+                        <h2 className="font-semibold text-2xl">
                           Flutter Challenge
                         </h2>
                         <a
@@ -187,10 +198,7 @@ const WorkSection = () => {
                           rel="noopener noreferrer"
                           target="_blank"
                         >
-                          <span className="invisible sm:visible">
-                            <span className="text-xs">go to </span>→ flutter
-                          </span>
-                          <TbExternalLink size={25} className="mx-2" />
+                          <BiLogoGithub size={25} className="mx-2" />
                         </a>
                       </div>
                       <div className="my-4"></div>
@@ -208,20 +216,19 @@ const WorkSection = () => {
                   </div>
                 </li>
                 <li id="portfolio">
-                  <h2 className="text-2xl"></h2>
                   <div className="my-10"></div>
                   <div className="flex justify-start">
                     <div className="inline-block">
-                      <span>
-                        <HiArrowRight
-                          size={20}
-                          className="animate-bounce mx-1"
-                        ></HiArrowRight>
+                      <span className="animate-pulse">
+                        <CgAsterisk
+                          size={30}
+                          className="animate-spin-slow mb-1"
+                        ></CgAsterisk>
                       </span>
                     </div>
                     <div className="inline-block">
                       <div className="flex justify-between">
-                        <h2 className="font-semibold text-xl">Portfolio</h2>
+                        <h2 className="font-semibold text-2xl">Portfolio</h2>
                         <a
                           className="flex"
                           id="window open"
